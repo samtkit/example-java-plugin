@@ -1,0 +1,13 @@
+source: .
+generators:
+  - name: plantuml
+    output: ./out
+    options:
+      type: class
+      file: class.puml
+
+  - name: plantuml
+    output: ./out
+    options:
+      type: component
+      file: component.puml

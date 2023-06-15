@@ -1,0 +1,5 @@
+package com.example.othercompany
+
+consume com.example.company.MyFoo {
+    uses com.example.company.Foo
+}

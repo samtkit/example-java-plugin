@@ -1,0 +1,27 @@
+package com.example.company
+
+enum A {
+  FOO,
+  BAR,
+  BAZ
+}
+
+record B { foo: Int }
+
+service Foo { foo(): B }
+
+service Bar {
+    complex(withParameter: Int): String?
+}
+
+provide MyFoo {
+    implements Foo
+
+    transport MyTransport {
+        paths: {
+            Foo: {
+                foo: "./foo.csv"
+            }
+        }
+    }
+}
